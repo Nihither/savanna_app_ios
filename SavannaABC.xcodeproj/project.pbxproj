@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		A2266F522B00252400FCBB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F512B00252400FCBB87 /* AppDelegate.swift */; };
 		A2266F542B00252400FCBB87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F532B00252400FCBB87 /* SceneDelegate.swift */; };
-		A2266F562B00252400FCBB87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F552B00252400FCBB87 /* ViewController.swift */; };
 		A2266F592B00252400FCBB87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2266F572B00252400FCBB87 /* Main.storyboard */; };
 		A2266F5B2B00252600FCBB87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2266F5A2B00252600FCBB87 /* Assets.xcassets */; };
 		A2266F5E2B00252600FCBB87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2266F5C2B00252600FCBB87 /* LaunchScreen.storyboard */; };
+		A2266F6A2B015E8000FCBB87 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F692B015E8000FCBB87 /* NewsListViewController.swift */; };
+		A2266F6C2B015EF600FCBB87 /* LessonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F6B2B015EF600FCBB87 /* LessonsListViewController.swift */; };
+		A2266F6E2B015F2000FCBB87 /* ChatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F6D2B015F2000FCBB87 /* ChatsListViewController.swift */; };
+		A2266F702B015F4E00FCBB87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F6F2B015F4E00FCBB87 /* ProfileViewController.swift */; };
+		A2266F722B01600A00FCBB87 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F712B01600A00FCBB87 /* File.swift */; };
+		A2266F742B0160D300FCBB87 /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F732B0160D300FCBB87 /* NewsItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2266F4E2B00252400FCBB87 /* SavannaABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavannaABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2266F512B00252400FCBB87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2266F532B00252400FCBB87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A2266F552B00252400FCBB87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2266F582B00252400FCBB87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2266F5A2B00252600FCBB87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2266F5D2B00252600FCBB87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2266F5F2B00252600FCBB87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2266F692B015E8000FCBB87 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		A2266F6B2B015EF600FCBB87 /* LessonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListViewController.swift; sourceTree = "<group>"; };
+		A2266F6D2B015F2000FCBB87 /* ChatsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListViewController.swift; sourceTree = "<group>"; };
+		A2266F6F2B015F4E00FCBB87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A2266F712B01600A00FCBB87 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		A2266F732B0160D300FCBB87 /* NewsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				A2266F512B00252400FCBB87 /* AppDelegate.swift */,
 				A2266F532B00252400FCBB87 /* SceneDelegate.swift */,
-				A2266F552B00252400FCBB87 /* ViewController.swift */,
-				A2266F572B00252400FCBB87 /* Main.storyboard */,
+				A2266F662B015DED00FCBB87 /* Models */,
+				A2266F672B015DF400FCBB87 /* Views */,
+				A2266F682B015DFE00FCBB87 /* Controllers */,
 				A2266F5A2B00252600FCBB87 /* Assets.xcassets */,
 				A2266F5C2B00252600FCBB87 /* LaunchScreen.storyboard */,
 				A2266F5F2B00252600FCBB87 /* Info.plist */,
 			);
 			path = SavannaABC;
+			sourceTree = "<group>";
+		};
+		A2266F662B015DED00FCBB87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2266F712B01600A00FCBB87 /* File.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2266F672B015DF400FCBB87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2266F572B00252400FCBB87 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2266F682B015DFE00FCBB87 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2266F692B015E8000FCBB87 /* NewsListViewController.swift */,
+				A2266F732B0160D300FCBB87 /* NewsItemViewController.swift */,
+				A2266F6B2B015EF600FCBB87 /* LessonsListViewController.swift */,
+				A2266F6D2B015F2000FCBB87 /* ChatsListViewController.swift */,
+				A2266F6F2B015F4E00FCBB87 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2266F562B00252400FCBB87 /* ViewController.swift in Sources */,
+				A2266F702B015F4E00FCBB87 /* ProfileViewController.swift in Sources */,
+				A2266F6C2B015EF600FCBB87 /* LessonsListViewController.swift in Sources */,
+				A2266F742B0160D300FCBB87 /* NewsItemViewController.swift in Sources */,
+				A2266F722B01600A00FCBB87 /* File.swift in Sources */,
+				A2266F6E2B015F2000FCBB87 /* ChatsListViewController.swift in Sources */,
+				A2266F6A2B015E8000FCBB87 /* NewsListViewController.swift in Sources */,
 				A2266F522B00252400FCBB87 /* AppDelegate.swift in Sources */,
 				A2266F542B00252400FCBB87 /* SceneDelegate.swift in Sources */,
 			);
@@ -291,10 +335,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SavannaABC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +347,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nihither.SavannaABC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +367,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SavannaABC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +379,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nihither.SavannaABC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
