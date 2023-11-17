@@ -8,22 +8,32 @@
 import UIKit
 
 class NewsItemViewController: UIViewController {
+    
+    @IBOutlet weak var newsItemTitle: UILabel!
+    @IBOutlet weak var newsItemImage: UIImageView!
+    @IBOutlet weak var newsItemText: UILabel!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
+    var newsTitle: String = ""
+    var newsText: String = ""
+    var newsImageName: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        newsItemTitle.text = newsTitle
+        setImage(image: UIImage(named: newsImageName)!)
+        newsItemText.text = newsText
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setImage(image: UIImage) {
+        let hRatio = image.size.height / image.size.width
+        let newImageHeight = hRatio * UIScreen.main.bounds.width
+        heightConstraint.constant = newImageHeight
+        newsItemImage.image = image
+        newsItemImage.layoutIfNeeded()
     }
-    */
 
 }

@@ -10,5 +10,7 @@ import Foundation
 struct K {
     struct Identifiers {
         static let goToNewsItem: String = "goToNewsItem"
+        static let newsItemCell: String = "newsItemInListCell"
+        static let newsItemInListCellNibName = "NewsItemInListCell"
     }
 }
