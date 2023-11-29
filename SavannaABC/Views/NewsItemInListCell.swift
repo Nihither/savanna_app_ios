@@ -11,6 +11,7 @@ class NewsItemInListCell: UITableViewCell {
     
     @IBOutlet weak var newsItemTitle: UILabel!
     @IBOutlet weak var newsItemImage: UIImageView!
+    @IBOutlet weak var newsItemText: UILabel!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
@@ -24,7 +25,7 @@ class NewsItemInListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setImage(image:UIImage) {
+    func setImage(image: UIImage) {
         let hRatio = image.size.height / image.size.width
         let newImageHeight = hRatio * UIScreen.main.bounds.width
         heightConstraint.constant = newImageHeight

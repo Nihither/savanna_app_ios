@@ -6,15 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct NewsItem {
-    let title: String
-    let text: String
-    let imageName: String
-    
-    init(title: String, text: String, imageName: String) {
-        self.title = title
-        self.text = text
-        self.imageName = imageName
-    }
+    var id: Int?
+    var title: String?
+    var text: String?
+    var imageURL: URL?
+    var createdDate: Date?
+    var image: UIImage?
 }

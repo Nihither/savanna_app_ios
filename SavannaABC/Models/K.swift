@@ -13,4 +13,7 @@ struct K {
         static let newsItemCell: String = "newsItemInListCell"
         static let newsItemInListCellNibName = "NewsItemInListCell"
     }
+    struct Backend {
+        static let baseUrl: String = "http://192.168.0.47:8000"
+    }
 }

@@ -16,13 +16,15 @@ class NewsItemViewController: UIViewController {
     
     var newsTitle: String = ""
     var newsText: String = ""
-    var newsImageName: String = ""
+    var newsImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
         newsItemTitle.text = newsTitle
-        setImage(image: UIImage(named: newsImageName)!)
+        if let safeNewsImage = newsImage {
+            setImage(image: safeNewsImage)
+        }
         newsItemText.text = newsText
 
         // Do any additional setup after loading the view.

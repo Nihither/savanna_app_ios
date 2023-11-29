@@ -10,55 +10,70 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsItemInListCell" rowHeight="440" id="KGk-i7-Jjw" customClass="NewsItemInListCell" customModule="SavannaABC" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsItemInListCell" rowHeight="225" id="KGk-i7-Jjw" customClass="NewsItemInListCell" customModule="SavannaABC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="225"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                <rect key="frame" x="0.0" y="0.0" width="284" height="225"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-rn-byh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ait-Ry-cQK">
+                        <rect key="frame" x="0.0" y="0.0" width="284" height="225"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название очередной очешуительной статьи" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-CR-1Pf">
-                                <rect key="frame" x="10" y="5" width="444" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ju-WD-RX1">
+                                <rect key="frame" x="8" y="4.9999999999999982" width="268" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" image="pisa" translatesAutoresizingMaskIntoConstraints="NO" id="9Dg-dR-9NW">
-                                <rect key="frame" x="0.0" y="51" width="320" height="384"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIa-u4-vSE">
+                                <rect key="frame" x="0.0" y="41.333333333333343" width="284" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="384" id="7uw-HL-ld0"/>
+                                    <constraint firstAttribute="height" constant="50" id="XkA-a5-FiY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Текст" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFu-y1-Nqf">
+                                <rect key="frame" x="8" y="101.33333333333331" width="268" height="98.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L10-A9-SmJ">
+                                <rect key="frame" x="0.0" y="210" width="284" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="k7x-XT-OPX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="9Dg-dR-9NW" firstAttribute="leading" secondItem="Gaq-rn-byh" secondAttribute="leading" id="9RS-ku-A91"/>
-                            <constraint firstItem="fMG-CR-1Pf" firstAttribute="leading" secondItem="Gaq-rn-byh" secondAttribute="leading" constant="10" id="FUL-RN-x99"/>
-                            <constraint firstAttribute="trailing" secondItem="9Dg-dR-9NW" secondAttribute="trailing" id="fWf-Xh-zxD"/>
-                            <constraint firstItem="fMG-CR-1Pf" firstAttribute="top" secondItem="Gaq-rn-byh" secondAttribute="top" constant="5" id="nbe-wN-NPq"/>
-                            <constraint firstAttribute="trailing" secondItem="fMG-CR-1Pf" secondAttribute="trailing" constant="10" id="x8p-VU-lOk"/>
+                            <constraint firstItem="MFu-y1-Nqf" firstAttribute="leading" secondItem="ait-Ry-cQK" secondAttribute="leading" constant="8" id="7lt-fs-k2I"/>
+                            <constraint firstAttribute="trailing" secondItem="kIa-u4-vSE" secondAttribute="trailing" id="9zF-FG-0qE"/>
+                            <constraint firstAttribute="trailing" secondItem="MFu-y1-Nqf" secondAttribute="trailing" constant="8" id="Vmk-me-bnK"/>
+                            <constraint firstItem="L10-A9-SmJ" firstAttribute="leading" secondItem="ait-Ry-cQK" secondAttribute="leading" id="Wg8-zr-XOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ju-WD-RX1" secondAttribute="trailing" constant="8" id="Xb4-qT-Tqm"/>
+                            <constraint firstItem="3Ju-WD-RX1" firstAttribute="top" secondItem="ait-Ry-cQK" secondAttribute="top" constant="5" id="b1o-H8-srJ"/>
+                            <constraint firstItem="3Ju-WD-RX1" firstAttribute="top" secondItem="ait-Ry-cQK" secondAttribute="top" constant="5" id="pLV-yo-w8K"/>
+                            <constraint firstItem="kIa-u4-vSE" firstAttribute="leading" secondItem="ait-Ry-cQK" secondAttribute="leading" id="tJa-S9-7xz"/>
+                            <constraint firstAttribute="trailing" secondItem="L10-A9-SmJ" secondAttribute="trailing" id="yIS-72-4rC"/>
                         </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Gaq-rn-byh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="10v-jE-qQG"/>
-                    <constraint firstItem="Gaq-rn-byh" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="D7S-YG-FTr"/>
-                    <constraint firstItem="Gaq-rn-byh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="enm-gu-eKy"/>
-                    <constraint firstAttribute="bottom" secondItem="Gaq-rn-byh" secondAttribute="bottom" constant="5" id="kYz-Xf-M9E"/>
+                    <constraint firstItem="ait-Ry-cQK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FAT-ay-ikt"/>
+                    <constraint firstItem="ait-Ry-cQK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cFd-eA-jfa"/>
+                    <constraint firstAttribute="bottom" secondItem="ait-Ry-cQK" secondAttribute="bottom" id="hqh-92-wLQ"/>
+                    <constraint firstAttribute="trailing" secondItem="ait-Ry-cQK" secondAttribute="trailing" id="iuR-AR-32f"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="heightConstraint" destination="7uw-HL-ld0" id="Jln-hN-I6M"/>
-                <outlet property="newsItemImage" destination="9Dg-dR-9NW" id="6xW-Px-z2k"/>
-                <outlet property="newsItemTitle" destination="fMG-CR-1Pf" id="wye-MU-vaY"/>
+                <outlet property="heightConstraint" destination="XkA-a5-FiY" id="Pjw-j9-oWy"/>
+                <outlet property="newsItemImage" destination="kIa-u4-vSE" id="Zxl-7T-CGX"/>
+                <outlet property="newsItemText" destination="MFu-y1-Nqf" id="89Z-Jw-Mbm"/>
+                <outlet property="newsItemTitle" destination="3Ju-WD-RX1" id="NiU-L8-OhG"/>
             </connections>
-            <point key="canvasLocation" x="-67.175572519083971" y="-11.971830985915494"/>
+            <point key="canvasLocation" x="-320.61068702290078" y="325"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="pisa" width="768" height="1024"/>
-    </resources>
 </document>

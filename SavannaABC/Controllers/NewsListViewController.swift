@@ -9,29 +9,36 @@ import UIKit
 
 class NewsListViewController: UITableViewController {
     
-    var newsArray: [NewsItem] = [
-        NewsItem(title: Samples.Sample1.title, text: Samples.Sample1.text, imageName: Samples.Sample1.imageName),
-        NewsItem(title: Samples.Sample2.title, text: Samples.Sample2.text, imageName: Samples.Sample2.imageName)
-    ]
+    var newsArray: Array<NewsItem>? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.navigationBar.isHidden = true
         tableView.register(UINib(nibName: K.Identifiers.newsItemInListCellNibName, bundle: nil), forCellReuseIdentifier: K.Identifiers.newsItemCell)
+        Task {
+            do {
+                newsArray = try await loadNews()
+                tableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return newsArray.count
+        return newsArray?.count ?? 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Identifiers.newsItemCell, for: indexPath) as! NewsItemInListCell
-        cell.newsItemTitle.text = newsArray[indexPath.row].title
-//        cell.newsItemImage.image = UIImage(named: newsArray[indexPath.row].imageName)
-        cell.setImage(image: UIImage(named: newsArray[indexPath.row].imageName)!)
+        // setting cell field
+        let item = newsArray![indexPath.row]
+        cell.newsItemTitle.text = item.title
+        if let image = item.image {
+            cell.setImage(image: image)
+        }
+        cell.newsItemText.text = item.text
         return cell
     }
     
@@ -42,55 +49,47 @@ class NewsListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Identifiers.goToNewsItem {
             let destinationVC = segue.destination as! NewsItemViewController
-            destinationVC.newsTitle = newsArray[tableView.indexPathForSelectedRow!.row].title
-            destinationVC.newsImageName = newsArray[tableView.indexPathForSelectedRow!.row].imageName
-            destinationVC.newsText = newsArray[tableView.indexPathForSelectedRow!.row].text
+            let item = newsArray![tableView.indexPathForSelectedRow!.row]
+            destinationVC.newsTitle = item.title!
+            if let image = item.image {
+                destinationVC.newsImage = image
+            }
+            destinationVC.newsText = item.text!
         }
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func loadNews() async throws -> [NewsItem]? {
+        let url = URL(string: "\(K.Backend.baseUrl)/api/news/all/")!
+        let request = URLRequest(url: url)
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let newsList = await parseJSON(data: data)
+        return newsList
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func parseJSON(data: Data) async -> Array<NewsItem>? {
+        var newsList = [NewsItem]()
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        do {
+            let decodedData = try decoder.decode(NewsList.self, from: data)
+            for item in decodedData.news {
+                var newItem = NewsItem()
+                newItem.id = item.id
+                newItem.title = item.title
+                newItem.text = item.text
+                newItem.createdDate = item.createdDate
+                newItem.imageURL = URL(string: "\(K.Backend.baseUrl)\(item.image_url)")
+                if let imageURL = newItem.imageURL {
+                    let loadedImage = ImageLoader(imageUrl: imageURL)
+                    newItem.image = try await loadedImage.image
+                }
+                newsList.append(newItem)
+            }
+            return newsList
+        } catch {
+            print("There is an error decoding data: \(String(describing: error))")
+            return nil
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
