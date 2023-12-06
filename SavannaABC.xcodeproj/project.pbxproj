@@ -21,9 +21,10 @@
 		A2266F762B01622200FCBB87 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F752B01622200FCBB87 /* NewsItem.swift */; };
 		A2266F792B029A0A00FCBB87 /* NewsItemInListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F772B029A0A00FCBB87 /* NewsItemInListCell.swift */; };
 		A2266F7A2B029A0A00FCBB87 /* NewsItemInListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2266F782B029A0A00FCBB87 /* NewsItemInListCell.xib */; };
-		A2266F7C2B03F77A00FCBB87 /* NewsSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2266F7B2B03F77A00FCBB87 /* NewsSamples.swift */; };
 		A24A1DC82B11458E00934D4E /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A1DC72B11458E00934D4E /* NewsList.swift */; };
 		A25740D02B1773AF008C4E2A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25740CF2B1773AE008C4E2A /* ImageLoader.swift */; };
+		A2CD74A72B1E5C8800E2586B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CD74A62B1E5C8800E2586B /* LogInViewController.swift */; };
+		A2CD74A92B1FCDA700E2586B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CD74A82B1FCDA700E2586B /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +44,10 @@
 		A2266F752B01622200FCBB87 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		A2266F772B029A0A00FCBB87 /* NewsItemInListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemInListCell.swift; sourceTree = "<group>"; };
 		A2266F782B029A0A00FCBB87 /* NewsItemInListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemInListCell.xib; sourceTree = "<group>"; };
-		A2266F7B2B03F77A00FCBB87 /* NewsSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSamples.swift; sourceTree = "<group>"; };
 		A24A1DC72B11458E00934D4E /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		A25740CF2B1773AE008C4E2A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		A2CD74A62B1E5C8800E2586B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		A2CD74A82B1FCDA700E2586B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,8 @@
 				A2266F712B01600A00FCBB87 /* K.swift */,
 				A2266F752B01622200FCBB87 /* NewsItem.swift */,
 				A25740CF2B1773AE008C4E2A /* ImageLoader.swift */,
-				A2266F7B2B03F77A00FCBB87 /* NewsSamples.swift */,
 				A24A1DC72B11458E00934D4E /* NewsList.swift */,
+				A2CD74A82B1FCDA700E2586B /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,6 +122,7 @@
 				A2266F6B2B015EF600FCBB87 /* LessonsListViewController.swift */,
 				A2266F6D2B015F2000FCBB87 /* ChatsListViewController.swift */,
 				A2266F6F2B015F4E00FCBB87 /* ProfileViewController.swift */,
+				A2CD74A62B1E5C8800E2586B /* LogInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,13 +202,14 @@
 				A2266F792B029A0A00FCBB87 /* NewsItemInListCell.swift in Sources */,
 				A2266F702B015F4E00FCBB87 /* ProfileViewController.swift in Sources */,
 				A2266F6C2B015EF600FCBB87 /* LessonsListViewController.swift in Sources */,
+				A2CD74A92B1FCDA700E2586B /* UserData.swift in Sources */,
 				A2266F742B0160D300FCBB87 /* NewsItemViewController.swift in Sources */,
 				A2266F722B01600A00FCBB87 /* K.swift in Sources */,
 				A2266F6E2B015F2000FCBB87 /* ChatsListViewController.swift in Sources */,
 				A24A1DC82B11458E00934D4E /* NewsList.swift in Sources */,
 				A2266F6A2B015E8000FCBB87 /* NewsListViewController.swift in Sources */,
-				A2266F7C2B03F77A00FCBB87 /* NewsSamples.swift in Sources */,
 				A2266F522B00252400FCBB87 /* AppDelegate.swift in Sources */,
+				A2CD74A72B1E5C8800E2586B /* LogInViewController.swift in Sources */,
 				A2266F762B01622200FCBB87 /* NewsItem.swift in Sources */,
 				A2266F542B00252400FCBB87 /* SceneDelegate.swift in Sources */,
 				A25740D02B1773AF008C4E2A /* ImageLoader.swift in Sources */,
@@ -284,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -338,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
